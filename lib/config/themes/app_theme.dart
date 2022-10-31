@@ -21,7 +21,6 @@ ThemeData appTheme() => ThemeData(
         systemOverlayStyle:
             SystemUiOverlayStyle(statusBarIconBrightness: Brightness.dark),
       ),
-      
       textTheme: const TextTheme(
           bodyLarge: TextStyle(
         color: Colors.white,

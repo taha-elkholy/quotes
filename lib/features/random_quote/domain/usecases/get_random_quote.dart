@@ -4,7 +4,7 @@ import 'package:quotes/core/usecase/usecase.dart';
 import 'package:quotes/features/random_quote/domain/entities/quote.dart';
 import 'package:quotes/features/random_quote/domain/repositories/quote_repository.dart';
 
-class GetRandomQuote extends UseCase<Quote, NoParam> {
+class GetRandomQuote implements UseCase<Quote, NoParam> {
   final QuoteRepository _quoteRepository;
 
   GetRandomQuote(this._quoteRepository);

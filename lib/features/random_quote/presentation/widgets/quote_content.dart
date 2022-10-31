@@ -9,7 +9,6 @@ class QuoteContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: AppColors.primary,
@@ -24,7 +23,9 @@ class QuoteContent extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 25,),
+              const SizedBox(
+                height: 25,
+              ),
               Text(
                 author,
                 style: Theme.of(context).textTheme.bodyLarge,
