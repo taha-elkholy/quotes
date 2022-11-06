@@ -21,11 +21,17 @@ ThemeData appTheme() => ThemeData(
         systemOverlayStyle:
             SystemUiOverlayStyle(statusBarIconBrightness: Brightness.dark),
       ),
-      textTheme: const TextTheme(
-          bodyLarge: TextStyle(
-        color: Colors.white,
-        fontSize: 22,
-        height: 1.5,
-        fontWeight: FontWeight.bold,
-      )),
+      textTheme: TextTheme(
+        bodyLarge: const TextStyle(
+          color: Colors.white,
+          fontSize: 22,
+          height: 1.5,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyMedium: TextStyle(
+          color: AppColors.hint,
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
     );

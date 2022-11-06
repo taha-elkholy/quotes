@@ -8,3 +8,23 @@ abstract class QuoteState extends Equatable {
 }
 
 class QuoteInitial extends QuoteState {}
+
+class QuoteLoading extends QuoteState {}
+
+class QuoteLoaded extends QuoteState {
+  final Quote quote;
+
+  const QuoteLoaded({required this.quote});
+
+  @override
+  List<Object> get props => [quote];
+}
+
+class QuoteError extends QuoteState {
+  final String errorMessage;
+
+  const QuoteError({required this.errorMessage});
+
+  @override
+  List<Object> get props => [errorMessage];
+}
