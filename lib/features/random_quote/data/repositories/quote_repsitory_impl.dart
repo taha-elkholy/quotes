@@ -27,7 +27,7 @@ class QuoteRepositoryImpl implements QuoteRepository {
         return left(ServerFailure());
       }
     } else {
-      //get from cach
+      //get from cache
       try {
         final cachedQuote = await _localDatasource.getLastRandomQuote();
         return right(cachedQuote);
