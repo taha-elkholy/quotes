@@ -58,5 +58,4 @@ Future<void> initServiceLocator() async {
         error: true,
       ));
   sl.registerLazySingleton(() => Dio());
-
 }

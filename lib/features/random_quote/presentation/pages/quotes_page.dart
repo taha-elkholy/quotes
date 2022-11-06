@@ -48,14 +48,13 @@ class _BodyState extends State<_Body> {
       padding: const EdgeInsets.all(20),
       child: BlocBuilder<QuoteCubit, QuoteState>(
         builder: (context, state) {
-          
           if (state is QuoteError) {
             return AppErrorWidget(
               errorMessage: state.errorMessage,
               onRefresh: () => _getRandomQuote(context),
             );
           } else if (state is QuoteLoaded) {
-           return  Column(
+            return Column(
               children: [
                 QuoteContent(
                   quote: state.quote.content,
@@ -87,7 +86,6 @@ class _BodyState extends State<_Body> {
               color: AppColors.primary,
             );
           }
-          
         },
       ),
     );

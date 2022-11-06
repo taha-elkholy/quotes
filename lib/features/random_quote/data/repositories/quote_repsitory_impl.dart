@@ -23,8 +23,8 @@ class QuoteRepositoryImpl implements QuoteRepository {
         // cach data
         await _localDatasource.cachRandomQuote(response);
         return right(response);
-      } on ServerException catch (_) {
-        return left(ServerFailure());
+      } on ServerException catch (serverException) {
+        return left(ServerFailure(serverException.message));
       }
     } else {
       //get from cache

@@ -27,7 +27,7 @@ class QuoteCubit extends Cubit<QuoteState> {
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return AppStrings.serverFailure;
+        return failure.message ?? AppStrings.serverFailure;
       case CacheFailure:
         return AppStrings.cacheFailure;
       default:
