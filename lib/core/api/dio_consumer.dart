@@ -76,8 +76,12 @@ class DioConsumer implements ApiService {
   }
 
   dynamic _mapResponseToJson(Response<dynamic> response) {
-    final responseJson = jsonDecode(response.data.toString());
-    return responseJson;
+    try {
+      final responseJson = jsonDecode(response.data.toString());
+      return responseJson;
+    } on FormatException catch (_) {
+      throw const NotFoundException();
+    }
   }
 
   dynamic _handleDioError(DioError error) {
